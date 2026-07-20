@@ -1,0 +1,68 @@
+/* design tokens and theme variables */
+:root {
+  /* Color Palette */
+  --primary-saffron: #C96A00;
+  --primary-saffron-light: #E08520;
+  --primary-saffron-dark: #A15400;
+  --primary-saffron-10: rgba(201, 106, 0, 0.1);
+  --primary-saffron-20: rgba(201, 106, 0, 0.2);
+  
+  --secondary-gold: #D4AF37;
+  --secondary-gold-light: #F3E5AB;
+  --secondary-gold-dark: #AA8B2C;
+  --secondary-gold-10: rgba(212, 175, 55, 0.1);
+  
+  --bg-warm-white: #FFF9F2;
+  --bg-card: #FFFFFF;
+  --bg-dark-accent: #2E1F11;
+  
+  --text-dark-brown: #3B2A1A;
+  --text-muted: #6B5541;
+  --text-light: #F7EFE5;
+  
+  --accent-red: #8B1E1E;
+  --accent-red-light: #A82E2E;
+  --accent-red-10: rgba(139, 30, 30, 0.1);
+  
+  /* Fonts */
+  --font-headings: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Poppins', system-ui, -apple-system, sans-serif;
+  
+  /* Spacing */
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 1rem;     /* 16px */
+  --space-md: 1.5rem;   /* 24px */
+  --space-lg: 2.5rem;   /* 40px */
+  --space-xl: 4rem;     /* 64px */
+  --space-xxl: 6rem;    /* 96px */
+  
+  /* Grid & Container */
+  --max-width: 1200px;
+  --container-padding: 2rem;
+  
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 8px rgba(59, 42, 26, 0.04);
+  --shadow-md: 0 8px 24px rgba(59, 42, 26, 0.06);
+  --shadow-lg: 0 16px 40px rgba(59, 42, 26, 0.08);
+  --shadow-inner: inset 0 2px 4px rgba(59, 42, 26, 0.06);
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 249, 242, 0.85);
+  --glass-border: rgba(212, 175, 55, 0.18);
+  --glass-shadow: 0 8px 32px 0 rgba(59, 42, 26, 0.04);
+  --glass-blur: blur(12px);
+  
+  /* Transitions (Framer Motion curve feels) */
+  --transition-fast: all 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+}
