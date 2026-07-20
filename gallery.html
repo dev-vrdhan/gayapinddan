@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="keywords" content="Gaya Ji gallery, Vishnupad Temple photos, Pind Daan images, Falgu River pictures, Pitr Paksha Mela photos, Gaya priests gallery">
+  
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+
+  <style>
+    /* Gallery page specific tweaks */
+    .gallery-item {
+      transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-item-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 180px;
+      background: linear-gradient(135deg, var(--primary-saffron-10) 0%, var(--secondary-gold-10) 100%);
+      border: 1.5px dashed var(--secondary-gold-light);
+      color: var(--primary-saffron);
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+    .gallery-item-placeholder svg {
+      opacity: 0.5;
+    }
+    /* Video card specific */
+    .gallery-video-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      border: 2px solid rgba(255,255,255,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      z-index: 3;
+      transition: all 0.3s ease;
+    }
+    .gallery-item:hover .gallery-video-badge {
+      background: var(--primary-saffron);
+      border-color: var(--primary-saffron);
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    /* 360 badge */
+    .badge-360 {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--secondary-gold);
+      color: var(--bg-dark-accent);
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      z-index: 3;
+    }
+  </style>
+
+  
+  
+  <link rel="canonical" href="https://www.gayapinddaan.com/gallery.html" />
+  
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.gayapinddaan.com/gallery.html">
+  <meta property="og:title" content="Sacred Gallery of Gaya Ji | Pind Daan Photos & Temple Views">
+  <meta property="og:description" content="View our premium gallery of sacred moments in Gaya Ji. See beautiful images of Vishnupad Temple, Falgu River, Akshay Vat, and Pind Daan rituals.">
+  <meta property="og:image" content="https://www.gayapinddaan.com/assets/resources/vishnupad_temple.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.gayapinddaan.com/gallery.html">
+  <meta property="twitter:title" content="Sacred Gallery of Gaya Ji | Pind Daan Photos & Temple Views">
+  <meta property="twitter:description" content="View our premium gallery of sacred moments in Gaya Ji. See beautiful images of Vishnupad Temple, Falgu River, Akshay Vat, and Pind Daan rituals.">
+  <meta property="twitter:image" content="https://www.gayapinddaan.com/assets/resources/vishnupad_temple.png">
+
+  <!-- Breadcrumb Schema (Global) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.gayapinddaan.com/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Gallery",
+        "item": "https://www.gayapinddaan.com/gallery.html"
+      }
+    ]
+  }
+  </script>
+  
+
+  <title>Sacred Gallery of Gaya Ji | Pind Daan Photos & Temple Views</title>
+  <meta name="description" content="View our premium gallery of sacred moments in Gaya Ji. See beautiful images of Vishnupad Temple, Falgu River, Akshay Vat, and Pind Daan rituals.">
+  <link rel="canonical" href="https://www.gayapinddaan.com/gallery.html" />
+  
+  <!-- OpenGraph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.gayapinddaan.com/gallery.html">
+  <meta property="og:title" content="Sacred Gallery of Gaya Ji | Pind Daan Photos & Temple Views">
+  <meta property="og:description" content="View our premium gallery of sacred moments in Gaya Ji. See beautiful images of Vishnupad Temple, Falgu River, Akshay Vat, and Pind Daan rituals.">
+  <meta property="og:image" content="https://www.gayapinddaan.com/assets/resources/vishnupad_temple.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.gayapinddaan.com/gallery.html">
+  <meta property="twitter:title" content="Sacred Gallery of Gaya Ji | Pind Daan Photos & Temple Views">
+  <meta property="twitter:description" content="View our premium gallery of sacred moments in Gaya Ji. See beautiful images of Vishnupad Temple, Falgu River, Akshay Vat, and Pind Daan rituals.">
+  <meta property="twitter:image" content="https://www.gayapinddaan.com/assets/resources/vishnupad_temple.png">
+
+  <!-- Breadcrumb Schema (Global) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.gayapinddaan.com/index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Gallery",
+        "item": "https://www.gayapinddaan.com/gallery.html"
+      }
+    ]
+  }
+  </script>
+  
+</head>
+<body>
+
+  <!-- Sticky Glass Navigation -->
+  <header class="header-main glass">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Gaya Pind Daan Logo">
+        <span class="logo-txt">Gaya Pind Daan</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-gaya.html">Gaya History</a></li>
+          <li><a href="rituals.html">Rituals</a></li>
+          <li><a href="mela.html">Pitr Paksh Mela</a></li>
+          <li><a href="why-choose-us.html">Why Choose Us</a></li>
+          <li><a href="gallery.html" style="color: var(--primary-saffron); font-weight: 600;">Gallery</a></li>
+          <li><a href="booking.html" class="btn btn-primary nav-cta">Book Ritual</a></li>
+          <li class="lang-switcher">
+            <svg class="lang-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            <div class="lang-select-wrapper">
+              <select class="lang-select" aria-label="Select Language">
+                <option value="en">EN</option>
+                <option value="hi">हिन्दी</option>
+                <option value="bn">বাংলা</option>
+              </select>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" style="padding-top: 100px;">
+
+    <!-- Hero Banner -->
+    <section class="section text-center" style="background: linear-gradient(135deg, var(--bg-dark-accent) 0%, #3B2A1A 100%); color: white; padding: var(--space-xl) 0;">
+      <div class="container">
+        <span class="cta-tag" style="color: var(--secondary-gold);">Visual Sacred Journey</span>
+        <h1 style="color: white; margin-bottom: var(--space-sm); font-size: clamp(2.2rem, 5vw, 3.8rem);">Sacred Gallery of Gaya Ji</h1>
+        <p style="color: rgba(255,249,242,0.8); max-width: 700px; margin: 0 auto;">Immerse yourself in the spiritual beauty of ancestral rituals, ancient temples, holy rivers, and the devotion of thousands of pilgrims.</p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Filter Tabs -->
+        <div class="gallery-filters reveal">
+          <button class="filter-btn active" data-filter="all">All Photos</button>
+          <button class="filter-btn" data-filter="temple">Temples</button>
+          <button class="filter-btn" data-filter="pind-daan">Pind Daan</button>
+          <button class="filter-btn" data-filter="falgu">Falgu River</button>
+          <button class="filter-btn" data-filter="akshay-vat">Akshay Vat</button>
+          <button class="filter-btn" data-filter="priests">Priests</button>
+          <button class="filter-btn" data-filter="mela">Pitr Paksha</button>
+          <button class="filter-btn" data-filter="devotees">Devotees</button>
+          <button class="filter-btn" data-filter="video">Videos</button>
+          <button class="filter-btn" data-filter="360">360° Views</button>
+        </div>
+
+        <!-- Masonry Gallery Grid -->
+        <div class="gallery-masonry" id="galleryMasonry">
+
+          <!-- Item 1: Vishnupad Temple -->
+          <div class="gallery-item"
+               data-category="temple"
+               data-lightbox="assets/resources/vishnupad_temple_gallery.png"
+               data-desc="The grand Vishnupad Temple — home to Lord Vishnu's sacred footprint on the Dharmasila stone.">
+            <img src="assets/resources/vishnupad_temple_gallery.png"
+                 alt="Vishnupad Temple Gaya"
+                 loading="lazy"
+                 style="min-height: 220px; object-fit: cover;">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Vishnupad Temple</div>
+              <div class="gallery-item-category">Sacred Temple</div>
+            </div>
+          </div>
+
+          <!-- Item 2: Pind Daan Ritual -->
+          <div class="gallery-item"
+               data-category="pind-daan"
+               data-lightbox="assets/resources/pind_daan_ritual.png"
+               data-desc="Pind Daan offerings laid out at the sacred Falgu river bank — rice balls with flowers and diyas.">
+            <img src="assets/resources/pind_daan_ritual.png"
+                 alt="Pind Daan ritual at Falgu river"
+                 loading="lazy"
+                 style="min-height: 280px; object-fit: cover;">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Pind Daan Ritual</div>
+              <div class="gallery-item-category">Sacred Offering</div>
+            </div>
+          </div>
+
+          <!-- Item 3: Falgu River Tarpan -->
+          <div class="gallery-item"
+               data-category="falgu"
+               data-lightbox="assets/resources/falgu_river_tarpan.png"
+               data-desc="Tarpan rites at the sacred Falgu River bank — copper vessels, sesame seeds, morning sunrise.">
+            <img src="assets/resources/falgu_river_tarpan.png"
+                 alt="Falgu River tarpan ritual"
+                 loading="lazy"
+                 style="min-height: 240px; object-fit: cover;">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Falgu River Tarpan</div>
+              <div class="gallery-item-category">River Offering</div>
+            </div>
+          </div>
+
+          <!-- Item 4: Akshay Vat -->
+          <div class="gallery-item"
+               data-category="akshay-vat"
+               data-lightbox="assets/resources/akshay_vat_tree.png"
+               data-desc="The immortal Akshay Vat Banyan tree — blessed by Goddess Sita to grant eternal protection.">
+            <img src="assets/resources/akshay_vat_tree.png"
+                 alt="Akshay Vat sacred banyan tree Gaya"
+                 loading="lazy"
+                 style="min-height: 260px; object-fit: cover;">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Akshay Vat</div>
+              <div class="gallery-item-category">Sacred Tree</div>
+            </div>
+          </div>
+
+          <!-- Item 5: Priest -->
+          <div class="gallery-item"
+               data-category="priests"
+               data-lightbox="assets/resources/priest_performing_puja.png"
+               data-desc="Our traditional Panda Ji performing ancestral Shraddha mantras with complete Vedic protocol.">
+            <img src="assets/resources/priest_performing_puja.png"
+                 alt="Traditional priest performing puja Gaya"
+                 loading="lazy"
+                 style="min-height: 200px; object-fit: cover;">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Panda Ji at Work</div>
+              <div class="gallery-item-category">Sacred Priest</div>
+            </div>
+          </div>
+
+          <!-- Item 6: Pitr Paksha Mela -->
+          <div class="gallery-item"
+               data-category="mela"
+               data-lightbox="assets/resources/pitr_paksha_mela.png"
+               data-desc="Massive Pitr Paksha Mela gathering at Gaya — over 1.5 million devotees at Falgu river banks.">
+            <img src="assets/resources/pitr_paksha_mela.png"
+                 alt="Pitr Paksha Mela crowd at Gaya"
+                 loading="lazy"
+                 style="min-height: 300px; object-fit: cover;">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Pitr Paksha Mela</div>
+              <div class="gallery-item-category">Annual Mela</div>
+            </div>
+          </div>
+
+          <!-- Item 7: Devotee Family -->
+          <div class="gallery-item"
+               data-category="devotees"
+               data-lightbox="assets/resources/devotees_family.png"
+               data-desc="Three generations of a devoted family at the Vishnupad Temple after completing Pind Daan.">
+            <img src="assets/resources/devotees_family.png"
+                 alt="Devotee family at Vishnupad Temple"
+                 loading="lazy"
+                 style="min-height: 240px; object-fit: cover;">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Devotee Family</div>
+              <div class="gallery-item-category">Family Pilgrimage</div>
+            </div>
+          </div>
+
+          <!-- Item 8: Video Card (stylized placeholder) -->
+          <div class="gallery-item"
+               data-category="video"
+               data-lightbox="assets/resources/pind_daan_ritual.png"
+               data-desc="Watch: Step-by-step Pind Daan ritual documentation at Devghat, Falgu River.">
+            <div style="min-height: 220px; background: linear-gradient(135deg, var(--bg-dark-accent) 0%, #3B2A1A 100%); position: relative; overflow: hidden;">
+              <img src="assets/resources/pind_daan_ritual.png"
+                   alt="Pind Daan video thumbnail"
+                   loading="lazy"
+                   style="width: 100%; min-height: 220px; object-fit: cover; opacity: 0.5;">
+              <div class="gallery-video-badge">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+            <div class="gallery-overlay" style="opacity: 1; background: none; padding: 8px 12px;">
+              <div class="gallery-item-title">Pind Daan Ceremony</div>
+              <div class="gallery-item-category">Video Documentary</div>
+            </div>
+          </div>
+
+          <!-- Item 9: 360 Degree View Card -->
+          <div class="gallery-item"
+               data-category="360"
+               data-lightbox="assets/resources/vishnupad_temple_gallery.png"
+               data-desc="360° panoramic view inside the Vishnupad Temple — experience the sacred darshan virtually.">
+            <div style="min-height: 200px; background: linear-gradient(135deg, var(--primary-saffron-10) 0%, rgba(212,175,55,0.15) 100%); position: relative; overflow: hidden;">
+              <img src="assets/resources/vishnupad_temple_gallery.png"
+                   alt="Vishnupad temple 360 view"
+                   loading="lazy"
+                   style="width: 100%; min-height: 200px; object-fit: cover; opacity: 0.6;">
+              <span class="badge-360">360°</span>
+            </div>
+            <div class="gallery-overlay" style="opacity: 1; background: none; padding: 8px 12px;">
+              <div class="gallery-item-title">Temple Interior 360°</div>
+              <div class="gallery-item-category">Panoramic View</div>
+            </div>
+          </div>
+
+          <!-- Item 10: Temple 2 (reuse Vishnupad as temple category) -->
+          <div class="gallery-item"
+               data-category="temple falgu"
+               data-lightbox="assets/resources/falgu_river_tarpan.png"
+               data-desc="Sacred Devghat on the Falgu River — the primary venue for Pind Daan in Gaya Ji.">
+            <img src="assets/resources/falgu_river_tarpan.png"
+                 alt="Devghat Falgu River Gaya"
+                 loading="lazy"
+                 style="min-height: 220px; object-fit: cover;">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Devghat Sacred Site</div>
+              <div class="gallery-item-category">Falgu River</div>
+            </div>
+          </div>
+
+          <!-- Item 11: More Priests -->
+          <div class="gallery-item"
+               data-category="priests mela"
+               data-lightbox="assets/resources/priest_performing_puja.png"
+               data-desc="Group of traditional pandits chanting Vedic hymns for Pitr Paksha Mela ceremony.">
+            <img src="assets/resources/priest_performing_puja.png"
+                 alt="Group of priests Pitr Paksha"
+                 loading="lazy"
+                 style="min-height: 260px; object-fit: cover;">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Vedic Chanting Session</div>
+              <div class="gallery-item-category">Sacred Priests</div>
+            </div>
+          </div>
+
+          <!-- Item 12: Devotees 2 -->
+          <div class="gallery-item"
+               data-category="devotees mela"
+               data-lightbox="assets/resources/pitr_paksha_mela.png"
+               data-desc="Pilgrims awaiting their turn for Pind Daan during Pitr Paksha Mela, holding puja thalis.">
+            <img src="assets/resources/pitr_paksha_mela.png"
+                 alt="Pilgrims with puja thalis Gaya"
+                 loading="lazy"
+                 style="min-height: 200px; object-fit: cover;">
+            <div class="gallery-overlay">
+              <div class="gallery-item-title">Devoted Pilgrims</div>
+              <div class="gallery-item-category">Pitr Paksha Mela</div>
+            </div>
+          </div>
+
+          <!-- Item 13: Acharya Jugal Kishore Pathak -->
+          <div class="gallery-item"
+               data-category="priests"
+               data-lightbox="assets/resources/JugalKishorePathak.jpg"
+               data-desc="Acharya Jugal Kishore Pathak, our esteemed priest guiding devotees with traditional rituals.">
+            <img src="assets/resources/JugalKishorePathak.jpg"
+                 alt="Acharya Jugal Kishore Pathak"
+                 loading="lazy"
+                 style="min-height: 250px; object-fit: cover;">
+            <div class="gallery-overlay">
+               <div class="gallery-item-title">Acharya Jugal Kishore Pathak</div>
+               <div class="gallery-item-category">Sacred Priests</div>
+            </div>
+          </div>
+
+          <!-- Item 14: Vishnupad Temple -->
+          <div class="gallery-item"
+               data-category="temple"
+               data-lightbox="assets/resources/VishupadTemple.jpg"
+               data-desc="A beautiful exterior view of the historic Vishnupad Temple.">
+            <img src="assets/resources/VishupadTemple.jpg"
+                 alt="Vishnupad Temple"
+                 loading="lazy"
+                 style="min-height: 250px; object-fit: cover;">
+            <div class="gallery-overlay">
+               <div class="gallery-item-title">Vishnupad Temple View</div>
+               <div class="gallery-item-category">Sacred Temple</div>
+            </div>
+          </div>
+
+          <!-- Item 15: Arapan Ritual -->
+          <div class="gallery-item"
+               data-category="pind-daan"
+               data-lightbox="assets/resources/arapan.webp"
+               data-desc="The sacred Arapan ritual being performed during Pind Daan.">
+            <img src="assets/resources/arapan.webp"
+                 alt="Arapan Ritual"
+                 loading="lazy"
+                 style="min-height: 250px; object-fit: cover;">
+            <div class="gallery-overlay">
+               <div class="gallery-item-title">Arapan Ritual</div>
+               <div class="gallery-item-category">Pind Daan</div>
+            </div>
+          </div>
+
+          <!-- Item 16: Pitr Paksha Crowd -->
+          <div class="gallery-item"
+               data-category="devotees mela"
+               data-lightbox="assets/resources/crowd.webp"
+               data-desc="Thousands of devotees gathered in Gaya Ji for Pitr Paksha Mela.">
+            <img src="assets/resources/crowd.webp"
+                 alt="Pitr Paksha Crowd"
+                 loading="lazy"
+                 style="min-height: 250px; object-fit: cover;">
+            <div class="gallery-overlay">
+               <div class="gallery-item-title">Devotee Gathering</div>
+               <div class="gallery-item-category">Pitr Paksha Mela</div>
+            </div>
+          </div>
+
+          <!-- Item 17: Tripindi Shradh -->
+          <div class="gallery-item"
+               data-category="pind-daan"
+               data-lightbox="assets/resources/tripindi.webp"
+               data-desc="Tripindi Shradh ritual to appease ancestors from the past three generations.">
+            <img src="assets/resources/tripindi.webp"
+                 alt="Tripindi Shradh"
+                 loading="lazy"
+                 style="min-height: 250px; object-fit: cover;">
+            <div class="gallery-overlay">
+               <div class="gallery-item-title">Tripindi Shradh</div>
+               <div class="gallery-item-category">Pind Daan</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Gallery Bottom CTA -->
+        <div class="text-center reveal" style="margin-top: var(--space-xl);">
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: var(--space-md);">Have you visited Gaya Ji? Share your photos with us and we'll feature them in this gallery.</p>
+          <a href="https://wa.me/916207831619?text=Pranam%20Panda%20Ji,%20I%20would%20like%20to%20share%20my%20Gaya%20visit%20photos%20with%20you." class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+            Share Your Photos
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Booking CTA Section -->
+    <section class="section sacred-cta-section text-center">
+      <div class="container cta-inner reveal">
+        <h2 class="cta-title">Ready to Create Your Own Sacred Memories?</h2>
+        <p class="cta-desc">Join thousands of devotees who have found peace for their ancestors in the holy land of Gaya Ji.</p>
+        <div class="cta-buttons">
+          <a href="booking.html" class="btn btn-primary">Book Your Ritual</a>
+          <a href="rituals.html" class="btn btn-secondary" style="color: white; border-color: rgba(255,255,255,0.4);">Explore Rituals</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">Gaya Pind Daan</a>
+          <p class="footer-desc">Providing genuine Vedic ancestral services under the guidance of traditional Gaya Dham Panda Ji lineage.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Important Pages</h4>
+          <ul class="footer-links">
+            <li><a href="about-gaya.html">Gaya History</a></li>
+            <li><a href="rituals.html">Ritual Cards</a></li>
+            <li><a href="mela.html">Pitr Paksh Mela</a></li>
+            <li><a href="why-choose-us.html">Why Choose Us</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links" style="color: rgba(255,255,255,0.7); font-size: 0.88rem;">
+            <li>Vishnupad Devghat Road, Gaya, Bihar - 823001</li>
+            <li>Phone: +91 62078 31619</li>
+            <li>Email: info@gayapinddaanpriest.com</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow Tradition</h4>
+          <div class="footer-socials">
+            <a href="#" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.14H6v4.24h3.5v11.8h5V11.7h3.86l.41-4.24Z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/ritik_pathak17" class="social-icon-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Gaya Pind Daan Pujari. All Rights Reserved. Designed in compliance with Vedic Shastras.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions -->
+  <div class="floating-actions">
+    <a href="tel:+916207831619" class="float-btn float-call" aria-label="Call Panda Ji" title="Call Panda Ji">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+    </a>
+    <a href="https://wa.me/916207831619?text=Pranam%20Panda%20Ji,%20I%20want%20to%20inquire%20about%20Pind%20Daan%20rituals%20in%20Gaya." class="float-btn float-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp" title="WhatsApp Panda Ji">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.458 5.704 1.46h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <a href="#" id="backToTop" class="float-btn float-top" aria-label="Scroll back to top" title="Scroll to top">
+      <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </a>
+  </div>
+
+  <!-- Google Translate Hidden Div & Script -->
+  <div id="google_translate_element"></div>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+
